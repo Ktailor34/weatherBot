@@ -4,10 +4,13 @@ from config import *
 import requests
 import json
 
+url = "https://community-open-weather-map.p.rapidapi.com/weather"
+querystring = {"lat":"35.9606","lon":"83.9207","units":"%22imperial%22","q":"knoxville"}
+
 responseJson = requests.request("GET", url, headers=headers, params=querystring)
 response = json.loads(responseJson.text)
 
-#print(response)
+print(response)
 response["main"] = "Drizzle"
 if (response["main"] in ["Drizzle", "Rain", "Snow", "Thunderstorm"]):
 
