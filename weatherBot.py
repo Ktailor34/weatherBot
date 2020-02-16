@@ -18,7 +18,7 @@ if (response["main"] in ["Drizzle", "Rain", "Snow", "Thunderstorm"]):
 	# to the phone number you signed up for Twilio with, or upgrade your
 	# account to send SMS to any phone number
 	client.messages.create(to="+18657732626", from_="+19177461747", body=response["main"])
-	print(response["main"])
+	print(response["description"])
 
 
 
