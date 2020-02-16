@@ -7,7 +7,7 @@ import json
 responseJson = requests.request("GET", url, headers=headers, params=querystring)
 response = json.loads(responseJson.text)
 
-print(response)
+#print(response)
 
 if (response["main"] in ["Drizzle", "Rain", "Snow", "Thunderstorm"]):
 
@@ -17,9 +17,8 @@ if (response["main"] in ["Drizzle", "Rain", "Snow", "Thunderstorm"]):
 	# change the "from_" number to your Twilio number and the "to" number
 	# to the phone number you signed up for Twilio with, or upgrade your
 	# account to send SMS to any phone number
-	client.messages.create(to="+18657732626", from_="+19177461747", body=response["main"].text)
-	print(response.text)
-
+	client.messages.create(to="+18657732626", from_="+19177461747", body=response["main"])
+	print(response["main"])
 
 
 
