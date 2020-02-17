@@ -28,7 +28,7 @@ if (response["main"] in ["Drizzle", "Rain", "Snow", "Thunderstorm"]):
 	# account to send SMS to any phone number
 	client.messages.create(to=os.environ.get("phoneTo"), from_=os.environ.get("phoneFrom"), body=response["main"])
 	print(response)
-	print(response["weather"]["description"])
+	print(response["weather"][2])
 
 
 
