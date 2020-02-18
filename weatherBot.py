@@ -17,6 +17,7 @@ responseJson = requests.request("GET", url, headers=headers, params=querystring)
 response = json.loads(responseJson.text)
 
 print(response)
+print(response["main"])
 #response["main"] = "Drizzle"
 if (response["main"] in ["Drizzle", "Rain", "Snow", "Thunderstorm"]):
 
