@@ -19,7 +19,7 @@ response = json.loads(responseJson.text)
 print(response)
 print(response["weather"][0]["main"])
 #response["main"] = "Drizzle"
-if (response["weather"][0]["main"]) in ["Drizzle", "Rain", "Snow", "Thunderstorm"]):
+if (response["weather"][0]["main"] in ["Drizzle", "Rain", "Snow", "Thunderstorm"]):
 
 	# the following line needs your Twilio Account SID and Auth Token
 	client = Client(os.environ.get("hiddenText"), os.environ.get("hiddenTextSecret"))
